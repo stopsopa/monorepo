@@ -61,6 +61,8 @@ if [ "$DIFF" != "" ] || [ "$1" = "force" ]; then
 
     npm version patch
 
+    make build
+
     # make umd
     # cat comment.txt dist/spvalidation.js > dist/test.js
     # mv dist/test.js dist/spvalidation.js
@@ -72,7 +74,8 @@ if [ "$DIFF" != "" ] || [ "$1" = "force" ]; then
 
                             # git add dist
                             # git add examples.es5.js
-                            #git commit --amend --no-edit
+                            git add merge.js
+                            git commit --amend --no-edit
 
     git push $ORIGIN $REMOTEBRANCH
 

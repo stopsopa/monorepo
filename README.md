@@ -12,6 +12,26 @@ npx gitmonorepo
 
 ```
 
+then:
+
+```bash
+
+cp .git/monorepo/config-dist.yml .git/config.yml
+          
+```
+
+then configure file .git/config.yml
+
+# Using from parent repository
+
+Executing automerge script
+
+```bash
+
+/bin/bash .git/monorepo/merge-generator.sh
+
+```
+
 # Mounting/unmounting git hooks
 
 ```bash
@@ -25,14 +45,6 @@ npx gitmonorepo
 ```
 
 ... by default after installing this lib through npx hooks will be automatically mounted
-
-# Using from parent repository
-
-Execute merge script
-
-```bash
-/bin/bash .git/monorepo/merge-generator.sh
-```
 
 # Add to parent repository Makefile
 
@@ -93,7 +105,7 @@ GITSTORAGELIST=(
 
 ```
 
-with repositiry https://github.com/stopsopa/gitstorage
+with repository https://github.com/stopsopa/gitstorage
 
 # dev
 
