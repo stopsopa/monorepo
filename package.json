@@ -6,6 +6,9 @@
         "dev": "node node_modules/.bin/webpack --watch"
     },
     "main": "install.js",
+    "bin": {
+        "gitmonorepo": "./install.js"
+    },
     "dependencies": {
         "inspc": "^0.0.19",
         "js-yaml": "^3.14.0",
