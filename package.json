@@ -1,5 +1,5 @@
 {
-    "name": "@stopsopa/monorepo",
+    "name": "gitmonorepo",
     "version": "0.0.2",
     "scripts": {
         "build": "node node_modules/.bin/webpack",

@@ -8,7 +8,7 @@ Run in project main directory
 
 ```bash
 
-npx @stopsopa/monorepo
+npx gitmonorepo
 
 ```
 

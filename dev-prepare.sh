@@ -73,11 +73,11 @@ cat <<EOF > .gitignore
 node_modules
 EOF
 
-npm link \@stopsopa/monorepo
+npm link gitmonorepo
 
-node node_modules/\@stopsopa/monorepo/install.js
+node node_modules/gitmonorepo/install.js
 
-cp node_modules/\@stopsopa/monorepo/config-dist.yml .git/config.yml
+cp node_modules/gitmonorepo/config-dist.yml .git/config.yml
 
 git add .
 
