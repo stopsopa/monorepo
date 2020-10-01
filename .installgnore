@@ -13,12 +13,15 @@ LICENSE
 /docker/
 *.tgz
 *.tar.gz
+*.tgz
 yarn*
 webpack*
 swappackagejson*
 .installgnore
 generated.sh
 package.webpack.json
+.npmignore
+update.sh
 
 
 
