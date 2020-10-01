@@ -1,6 +1,6 @@
 {
     "name": "gitmonorepo",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "scripts": {
         "build": "node node_modules/.bin/webpack",
         "dev": "node node_modules/.bin/webpack --watch"
