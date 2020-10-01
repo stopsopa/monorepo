@@ -1,0 +1,14 @@
+{
+    "name": "@stopsopa/monorepo",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "node node_modules/.bin/webpack",
+        "dev": "node node_modules/.bin/webpack --watch"
+    },
+    "main": "install.js",
+    "dependencies": {
+        "inspc": "^0.0.19",
+        "js-yaml": "^3.14.0",
+        "rimraf": "^3.0.2"
+    }
+}

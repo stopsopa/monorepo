@@ -1,0 +1,181 @@
+preventmergeto_local:
+    # disallowed branches to merge with master
+    master:
+        - bare_a
+        - bare_b
+        - bare_c
+        - bare_d
+        - bare_b_1
+        - bare_b_2
+        - bare_b_3
+        - bare_b_4
+
+# doesn't seems to work - no hook to detect it
+allowmerge_remote:
+    master: [ "../bare_master" ]
+    bare_a: [ "../bare_a" ]
+    bare_b: [ "../bare_b" ]
+    bare_c: [ "../bare_c" ]
+    bare_d: [ "../bare_d" ]
+    bare_b_1: [ "../bare_b" ]
+    bare_b_2: [ "../bare_c" ]
+    bare_b_3: [ "../bare_b" ]
+    bare_b_4: [ "../bare_b" ]
+
+# list of remotes and from what branches is possible to push
+# NOTICE: pushallow has higher priority than pushblock
+pushallow:
+    master: [ origin, backup ]
+    bare_a: [ bare_a, backup ]
+    bare_b: [ bare_b, backup ]
+    bare_c: [ bare_c, backup ]
+    bare_d: [ bare_d, backup ]
+    bare_b_1: [ bare_b, backup ]
+    bare_b_2: [ bare_b, backup ]
+    bare_b_3: [ bare_b, backup ]
+    bare_b_4: [ bare_b, backup ]
+
+# list of remotes and from what branches it is impossible to push
+pushblock:
+#  master: [ origin ]
+#    bare_b_3: [ bare_b, backup ]
+
+merge:
+    -
+        type: pullpush
+        localbranch: master
+        remote: origin
+        remotebranch: master
+        default: on
+        merge:
+            -
+                type: merge
+                remotebranch: master
+                localbranch: bare_a
+                default: on
+                merge:
+                    -
+                        type: pullpush
+                        localbranch: bare_a
+                        remote: bare_a
+                        remotebranch: master
+                        default: on
+            -
+                type: merge
+                remotebranch: master
+                localbranch: bare_b
+                default: on
+                merge:
+                    -
+                        type: pullpush
+                        localbranch: bare_b
+                        remote: bare_b
+                        remotebranch: master
+                        default: on
+                        merge:
+                            -
+                                type: merge
+                                remotebranch: bare_b
+                                localbranch: bare_b_1
+                                default: on
+                                merge:
+                                    -
+                                        type: pullpush
+                                        localbranch: bare_b_1
+                                        remote: bare_b
+                                        remotebranch: bare_b_1
+                                        default: on
+                            -
+                                type: merge
+                                remotebranch: bare_b
+                                localbranch: bare_b_2
+                                default: on
+                                merge:
+                                    -
+                                        type: pullpush
+                                        localbranch: bare_b_2
+                                        remote: bare_b
+                                        remotebranch: bare_b_2
+                                        default: on
+                            -
+                                type: merge
+                                remotebranch: bare_b
+                                localbranch: bare_b_3
+                                default: on
+                                merge:
+                                    -
+                                        type: pullpush
+                                        localbranch: bare_b_3
+                                        remote: bare_b
+                                        remotebranch: bare_b_3
+                                        default: on
+                            -
+                                type: merge
+                                remotebranch: bare_b
+                                localbranch: bare_b_4
+                                default: on
+                                merge:
+                                    -
+                                        type: pullpush
+                                        localbranch: bare_b_4
+                                        remote: bare_b
+                                        remotebranch: bare_b_4
+                                        default: on
+            -
+                type: merge
+                remotebranch: master
+                localbranch: bare_c
+                default: on
+                merge:
+                    -
+                        type: pullpush
+                        localbranch: bare_c
+                        remote: bare_c
+                        remotebranch: master
+                        default: on
+            -
+                type: merge
+                remotebranch: master
+                localbranch: bare_d
+                default: on
+                merge:
+                    -
+                        type: pullpush
+                        localbranch: bare_d
+                        remote: bare_d
+                        remotebranch: master
+                        default: on
+#            -
+#                type: template
+#                message: merge master & pullpush heroku [bitbucket]
+#                template: templates/heroku-bitbucket.sh
+#                default: off
+#
+#                remote: toolsbitbucket
+#                localbranch: tools
+#                remotebranch: master
+#            -
+#                type: template
+#                message: merge master & RELEASE to heroku [origin]
+#                template: templates/heroku-origin.sh
+#                default: off
+#
+#                remote: toolsheroku
+#                localbranch: tools
+#                remotebranch: master
+#                wormhole: git@github.com:stopsopa/gitwormhole-roderic-heroku.git
+#
+#            -
+#                type: merge
+#                remotebranch: master
+#                localbranch: zf_tailwind
+#                default: on
+#                merge:
+#                    -
+#                        type: pullpush
+#                        localbranch: zf_tailwind
+#                        remote: origin
+#                        remotebranch: zf_tailwind
+#                        default: on
+
+
