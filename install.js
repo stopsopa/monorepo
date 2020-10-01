@@ -639,9 +639,7 @@ Additional helpers:
 
     /bin/bash .git/monorepo/hooks.sh 
     /bin/bash .git/monorepo/hooks.sh --off
-    /bin/bash .git/monorepo/hooks.sh --revert 
-        
-        
+    /bin/bash .git/monorepo/hooks.sh --revert
     
 
 `);
