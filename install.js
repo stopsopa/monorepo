@@ -625,9 +625,22 @@ const installTool = (source, target, filter, replace) => new Promise((resolve, r
 ${cmdresult.stdout}                   
 Project was initialized in directory '${project}', enjoy 🍺
 
-Now run:    
-        
+More how to use: https://github.com/stopsopa/monorepo/blob/master/README.md
+
+Available commands:
+
+    cp .git/monorepo/config-dist.yml .git/config.yml
     
+       # configure file and then run:
+
+    /bin/bash .git/monorepo/merge-generator.sh
+
+Additional helpers:
+
+    /bin/bash .git/monorepo/hooks.sh 
+    /bin/bash .git/monorepo/hooks.sh --off
+    /bin/bash .git/monorepo/hooks.sh --revert 
+        
         
     
 

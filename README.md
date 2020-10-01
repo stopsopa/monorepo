@@ -38,7 +38,7 @@ Execute merge script
 
 ```makefile
 
-roderic-merge:
+merge:
 	/bin/bash .git/monorepo/merge-generator.sh                           
 
 ```
@@ -53,7 +53,7 @@ git remote add gca git@bitbucket.org:project/repository.git
 
 checkout remote to local branch
 ```bash
-git checkout -b repo_name remotes/repo_name/master
+git checkout -b branch remotes/repo_name/master
 ```
 
 If there is no master branch on remote (new repository) then
@@ -105,4 +105,4 @@ see *make dev-prepare* command
 
 - [x] handle merge-with-diff in react
 - [x] handle merge conflict during pull
-- [ ] npx installator 
+- [x] npx installator 
