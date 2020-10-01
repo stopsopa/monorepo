@@ -34,37 +34,12 @@ Execute merge script
 /bin/bash .git/monorepo/merge-generator.sh
 ```
 
-# Preparing new clone of entire stack (outdated)
-
-```bash
-git clone git@github.com:stopsopa/roderic.git
-cd roderic
-```
-now install roderic-private in it's .git directory
-
-```bash
-cd .git
-git clone git@github.com:stopsopa/roderic-private.git
-mv roderic-private/* .
-mv roderic-private/.* .
-ls -la 
-rm -rf roderic-private/
-chmod a+x hooks/prepare-commit-msg # hook have to be executable
-mkdir hooks_
-mv hooks/*.sample hooks_ # move all samples because it seems like it's messing up with real scripts
-
-cd ..
-/bin/bash .git/recreate-local-branches.sh
-
-```
-
 # Add to parent repository Makefile
 
 ```makefile
 
 roderic-merge:
-	@if [ -e .git/merge.sh ]; then /bin/bash .git/monorepo/merge-generator.sh; else printf "\n\n.git/merge.sh - doesn't exist, please install https://github.com/stopsopa/roderic-private follow instructions in README.md\n\n"; fi                                   
-
+	/bin/bash .git/monorepo/merge-generator.sh                           
 
 ```
 
