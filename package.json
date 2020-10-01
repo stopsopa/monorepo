@@ -9,6 +9,18 @@
     "bin": {
         "gitmonorepo": "./install.js"
     },
+    "keywords": [
+        "git",
+        "monorepo",
+        "mono",
+        "monorepos"
+    ],
+    "author": "Szymon Działowski",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/stopsopa/monorepo/issues"
+    },
+    "homepage": "https://github.com/stopsopa/monorepo",
     "dependencies": {
         "inspc": "^0.0.19",
         "js-yaml": "^3.14.0",
