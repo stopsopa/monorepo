@@ -1,4 +1,4 @@
-
+[![npm version](https://badge.fury.io/js/gitmonorepo.svg)](https://badge.fury.io/js/gitmonorepo)
 # homepage
     https://github.com/stopsopa/monorepo    
 
