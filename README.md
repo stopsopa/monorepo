@@ -118,3 +118,4 @@ see *make dev-prepare* command
 - [x] handle merge-with-diff in react
 - [x] handle merge conflict during pull
 - [x] npx installator 
+
