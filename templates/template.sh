@@ -14,7 +14,7 @@ Script crashed:
 
     Check what's happened and go back to master branch and execute again:
 
-    /bin/bash .git/generated.sh
+    /bin/bash .git/monorepo/generated.sh
 
 EOF
 }
